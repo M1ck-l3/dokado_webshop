@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f6f1;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body stretches to at least the height of the viewport */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 40px;
+    background-color: transparent; /* Make the header transparent */
+}
+
+.logo img {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+nav {
+    width: 100%; /* Ensure the nav spans the full width */
+}
+
+.nav-container {
+    position: relative;
+}
+
+.nav-line {
+    position: absolute;
+    bottom: -5px;
+    left: -10px;
+    width: calc(100% - 1345px); 
+    height: 1px;
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a:hover:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #333;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start (left) */
+    align-items: center;
+    padding: 40px;
+    gap: 40px; /* Adds space between the image and sale-info */
+    flex: 1; /* Allow the main content to grow and fill remaining space */
+}
+
+.image-container {
+    position: relative;
+    width: 50%; /* Adjust the width to make the container wider */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px; /* Move the container slightly to the right */
+    height: auto; /* Ensure the height is determined by its content */
+}
+
+
+.image-container img {
+    position: relative;
+    left: 0%; /* Move it more to the left */
+    z-index: 1;
+    width: 80%; /* Set the width to 60% of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: -5%; /* Move it more to the top */
+    left: 5%; /* Move it more to the left */
+    width: 90%; /* Make the pseudo-element wider than the image */
+    height: 110%; /* Make the pseudo-element taller than the image */
+    background-image: url('/images/dokado_homepage.png'); 
+    background-size: cover;
+    opacity: 0.5; /* Set the opacity to 50% */
+    z-index: 0;
+}
+
+
+.sale-info {
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Position it at the top of the viewport */
+    bottom: 0; /* Stretch it to the bottom of the viewport */
+    right: 0; /* Align it to the right side of the viewport */
+    background-color: #001f3f;
+    color: #C2AB8B;
+    padding: 100px 40px; /* Increase padding for more space at the top and bottom */
+    width: 38%; /* Set the width to 30% of the viewport */
+}
+
+.social-media {
+    position: absolute;
+    top: 10px; /* Position at the top */
+    right: 10px; /* Position to the right */
+    display: flex;
+}
+
+.social-media a {
+    margin-left: 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.sale-info h2 {
+    font-size: 36px;
+    margin: 0;
+    color: white;
+}
+
+.sale-info h3 {
+    font-size: 36px;
+    margin: 0;
+    color: #C2AB8B;
+}
+
+.sale-info p {
+    font-size: 16px;
+    margin: 20px 0;
+    color: white;
+}
+
+.sale-info a {
+    text-decoration: none;
+    color: #C2AB8B;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #001f3f;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items vertically */
+}
