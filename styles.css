@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -5,24 +6,26 @@ body {
     color: #333;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure the body stretches to at least the height of the viewport */
+    min-height: 100vh;
 }
 
+/* Header Styles */
 header {
+    font-size: 1.3em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 40px;
-    background-color: transparent; /* Make the header transparent */
+    background-color: transparent;
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     margin-bottom: 20px;
 }
 
 nav {
-    width: 100%; /* Ensure the nav spans the full width */
+    width: 100%;
 }
 
 .nav-container {
@@ -33,7 +36,7 @@ nav {
     position: absolute;
     bottom: -5px;
     left: -10px;
-    width: calc(100% - 1345px); 
+    width: calc(100% - 1155px);
     height: 1px;
     background-color: #333;
 }
@@ -71,104 +74,158 @@ nav ul li a:hover:before {
     background-color: #333;
 }
 
+/* Main Content Styles */
 main {
     display: flex;
-    justify-content: flex-start; /* Align items to the start (left) */
+    justify-content: flex-start;
     align-items: center;
     padding: 40px;
-    gap: 40px; /* Adds space between the image and sale-info */
-    flex: 1; /* Allow the main content to grow and fill remaining space */
+    gap: 40px;
+    flex: 1;
 }
 
 .image-container {
     position: relative;
-    width: 50%; /* Adjust the width to make the container wider */
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 50px; /* Move the container slightly to the right */
-    height: auto; /* Ensure the height is determined by its content */
+    margin-left: 50px;
+    height: auto;
 }
-
 
 .image-container img {
     position: relative;
-    left: 0%; /* Move it more to the left */
+    left: 0%;
     z-index: 1;
-    width: 80%; /* Set the width to 60% of its container */
-    height: auto; /* Maintain aspect ratio */
+    width: 80%;
+    height: auto;
 }
-
 
 .image-container::before {
     content: '';
     position: absolute;
-    top: -5%; /* Move it more to the top */
-    left: 5%; /* Move it more to the left */
-    width: 90%; /* Make the pseudo-element wider than the image */
-    height: 110%; /* Make the pseudo-element taller than the image */
-    background-image: url('/images/dokado_homepage.png'); 
+    top: -5%;
+    left: 5%;
+    width: 90%;
+    height: 110%;
+    background-image: url('/images/dokado_homepage.png');
     background-size: cover;
-    opacity: 0.5; /* Set the opacity to 50% */
+    opacity: 0.5;
     z-index: 0;
 }
 
-
 .sale-info {
-    position: fixed; /* Set position to fixed */
-    top: 0; /* Position it at the top of the viewport */
-    bottom: 0; /* Stretch it to the bottom of the viewport */
-    right: 0; /* Align it to the right side of the viewport */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
     background-color: #001f3f;
     color: #C2AB8B;
-    padding: 100px 40px; /* Increase padding for more space at the top and bottom */
-    width: 38%; /* Set the width to 30% of the viewport */
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 38%;
 }
 
-.social-media {
+.container {
+    text-align: left;
+    padding: 20px;
+    position: relative;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.title {
+    font-size: 3.5em;
+    color: #fff;
+    margin-top: 15%;
+    margin-left: 2%;
+}
+
+.subtitle {
+    font-size: 3em;
+    color: #C2AB8B;
+    margin-left: 2%;
+}
+
+.subtitle a {
+    font-size: 0.9em;
+    color: #C2AB8B;
+    text-decoration: none;
+    
+}
+
+.year {
+    font-size: 2.8em;
+    color: #C2AB8B;
+    margin-left: 18%;
+}
+
+.content h2 {
+    margin: 0%;
+    color: #fff;
+    margin-left: 25%;
+}
+
+.content h3 {
+    margin: 0;
+    
+}
+
+.content p {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 25%;
+}
+
+.content p a {
+    text-decoration: underline;
+}
+
+.content a {
+    color: #d2c6b3;
+    text-decoration: none;
+}
+
+.line-vertical {
     position: absolute;
-    top: 10px; /* Position at the top */
-    right: 10px; /* Position to the right */
-    display: flex;
+    top: 30%;
+    bottom: 0%;
+    left: 19%;
+    border-left: 1px solid #d2c6b3;
 }
 
-.social-media a {
-    margin-left: 10px;
+.line-horizontal {
+    position: absolute;
+    bottom: 13%;
+    left: 6%;
+    right: 15%;
+    border-bottom: 1px solid #d2c6b3;
+}
+
+/* Social Media Icons Styles */
+.social-media {
+    display: flex;
+    gap: 1px;
+    margin-left: 80%;
+    margin-top: 3%;
 }
 
 .social-media img {
-    width: 24px;
-    height: 24px;
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
 }
 
-.sale-info h2 {
-    font-size: 36px;
-    margin: 0;
-    color: white;
-}
-
-.sale-info h3 {
-    font-size: 36px;
-    margin: 0;
-    color: #C2AB8B;
-}
-
-.sale-info p {
-    font-size: 16px;
-    margin: 20px 0;
-    color: white;
-}
-
-.sale-info a {
-    text-decoration: none;
-    color: #C2AB8B;
-    font-weight: bold;
-}
-
+/* Footer Styles */
 footer {
     background-color: #001f3f;
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center; /* Center items vertically */
+    align-items: center;
 }
