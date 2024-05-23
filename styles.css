@@ -1,12 +1,14 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Aviator';
     background-color: #f9f6f1;
     color: #333;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* Header Styles */
@@ -36,7 +38,7 @@ nav {
     position: absolute;
     bottom: -5px;
     left: -10px;
-    width: calc(100% - 1155px);
+    width: calc(100% - 1200px);
     height: 1px;
     background-color: #333;
 }
@@ -147,7 +149,7 @@ main {
 .subtitle {
     font-size: 3em;
     color: #C2AB8B;
-    margin-left: 2%;
+    margin-left: 4%;
 }
 
 .subtitle a {
