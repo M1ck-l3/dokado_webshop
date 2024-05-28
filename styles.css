@@ -231,3 +231,87 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+
+
+footer {
+    background-color: #f1ede2;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-logo img {
+    max-width: 150px;
+}
+
+.footer-columns {
+    flex: 3;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding-left: 0; 
+    margin-left: 0;
+}
+
+.footer-column ul li {
+    padding-bottom: 10px;
+    color:#1d2141;
+}
+
+.footer-column ul li a {
+    color:#1d2141;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-column h3 {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #1d2141;
+}
+
+/ Email input field */
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px;
+    background-color: #1d2141;
+    color: #fff;
+    border: none;
+    border-radius: 18px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.newsletter-form button:hover {
+    background-color: #42476d;
+}
