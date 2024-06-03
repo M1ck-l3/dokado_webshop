@@ -303,3 +303,23 @@ footer {
         margin-left: 10px; /* Space between input and button */
     }
 }
+
+.products-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: aqua;
+    margin-top: 10%;
+    
+}
+
+.product-item {
+    margin-left: 20px;
+    margin-right: 20px;
+    
+
+}
+
+.product-item h4 {
+    font-size: 24px;
+
+}
