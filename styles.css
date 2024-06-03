@@ -185,13 +185,8 @@ main {
 }
 
 /* Footer Styles */
-footer {
-    background-color: #001f3f;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* Footer Styles */
+
 
 footer {
     background-color: #f1ede2;
@@ -202,6 +197,8 @@ footer {
 
 .footer-logo {
     flex: 1;
+    margin-bottom: 20px; /* margin tussen de columns en het logo wanneer het scherm kleiner wordt */
+    margin-top: 20px;
 }
 
 .footer-logo img {
@@ -211,12 +208,14 @@ footer {
 .footer-columns {
     flex: 3;
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
     justify-content: space-around;
 }
 
 .footer-column {
     flex: 1;
     padding: 0 20px;
+    margin-bottom: 20px;
 }
 
 .footer-column ul {
@@ -249,8 +248,9 @@ footer {
 
 .newsletter-form {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+
 }
 
 .newsletter-form input[type="email"] {
@@ -271,4 +271,35 @@ footer {
 
 .newsletter-form button:hover {
     background-color: #42476d;
+}
+
+
+/* Media queries for Responsive Design */
+@media (min-width: 768px) {
+    footer {
+        flex-direction: row; /* Revert to row for larger screens */
+        justify-content: space-between;
+    }
+
+    .footer-logo {
+        margin-bottom: 0;
+    }
+
+    .footer-columns {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .newsletter-form {
+        flex-direction: row; /* Revert to row for larger screens */
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"],
+    .newsletter-form button {
+        width: auto; /* Revert to auto width for larger screens */
+        margin-bottom: 0; /* Remove bottom margin */
+        margin-top: 10px;
+        margin-left: 10px; /* Space between input and button */
+    }
 }
