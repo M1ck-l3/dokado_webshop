@@ -22,7 +22,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 40px;
-    background-color: transparent;
+    background-color: #1d2141; /* Tijdelijk even de achtergrond kleur aangepast */
     z-index: 10; /* Ensure the header stays on top */
 }
 
