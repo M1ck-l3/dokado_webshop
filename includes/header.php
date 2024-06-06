@@ -8,6 +8,7 @@
             <nav>
                 <div class="nav-container">
                     <ul>
+                        <!-- hier wordt die page variable een de waarde gekoppeld -->
                         <li><a href="index.php?page=home">Home</a></li>
                         <li><a href="index.php?page=herenkleding">Heren kleding</a></li>
                         <li><a href="index.php?page=dameskleding">Dames kleding</a></li>

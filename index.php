@@ -9,12 +9,13 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <!-- Include de header -->
     <?php include 'includes\header.php';
 
-        // Determine the page to display
+        // page is de huidige variable die wordt aangepast in de header navigation
         $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-        // Switch statement to include the appropriate page
+        // Switch statement om te checken voor iedere page
         switch ($page) {
             case 'herenkleding':
                 include 'pages\heren_kleding.php';
@@ -28,12 +29,13 @@
                 include 'pages/contact.php';
                 break;
 
+            // Default waarde is de homepage    
             default:
                 include 'pages/home.php';
                 break;
         }
         
-    
+    // Include de footer
     include 'includes\footer.php';
     
     ?>
