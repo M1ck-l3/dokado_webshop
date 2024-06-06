@@ -22,7 +22,21 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 40px;
-    background-color: #1d2141; /* Tijdelijk even de achtergrond kleur aangepast */
+    background-color: #1d214100; 
+    z-index: 10; /* Ensure the header stays on top */
+}
+
+#heren_header {
+    position: absolute; /* Make the header position absolute */
+    top: 0;
+    left: 0;
+    width: 100%; /* Make the header span the full width */
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 40px;
+    background-color: #0E373B; 
     z-index: 10; /* Ensure the header stays on top */
 }
 
@@ -109,13 +123,14 @@ main {
     top: 0;
     bottom: 0;
     right: 0;
-    color: #C2AB8B;
+    color: #ffffff;
     padding-left: 40px;
     padding-right: 40px;
     width: 38%;
 }
 
 .container {
+    position: flex;
     text-align: left;
     padding: 30px;
     position: relative;
@@ -142,7 +157,7 @@ main {
 .content p {
     font-size: 1.5em;
     line-height: 1.5em;
-    color: #C2AB8B;
+    color: #ffffff;
 }
 
 .content p a {
@@ -150,7 +165,7 @@ main {
 }
 
 .content a {
-    color: #C2AB8B;
+    color: #ffffff;
     text-decoration: none;
 }
 
