@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     margin: 0;
-    font-family: 'quick_sandregular';
+    font-family: 'Quicksand', sans-serif;
     background-color: #f9f6f1;
     color: #333;
     display: flex;
@@ -154,8 +154,15 @@ main {
     font-weight: 900 !important;
 }
 
-.content p {
+.content h3 {
     font-size: 1.5em;
+    margin-top: 30px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.content p {
+    font-size: 1.4em;
     line-height: 1.5em;
     color: #ffffff;
 }
@@ -252,13 +259,6 @@ footer {
 
 .footer-column ul li a:hover {
     text-decoration: underline;
-}
-
-.footer-column h3 {
-    border-bottom: 1px solid #fff;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    color: #1d2141;
 }
 
 .newsletter-form {
