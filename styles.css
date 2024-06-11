@@ -13,31 +13,17 @@ body {
 
 /* Header Styles */
 header {
-    position: absolute; /* Make the header position absolute */
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%; /* Make the header span the full width */
+    width: 100%;
     font-size: 1.3em;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 40px;
-    background-color: #1d214100; 
-    z-index: 10; /* Ensure the header stays on top */
-}
-
-#heren_header {
-    position: absolute; /* Make the header position absolute */
-    top: 0;
-    left: 0;
-    width: 100%; /* Make the header span the full width */
-    font-size: 1.3em;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 40px;
-    background-color: #0E373B; 
-    z-index: 10; /* Ensure the header stays on top */
+    background-color: #1d2141; 
+    z-index: 10;
 }
 
 .logo img {
@@ -53,7 +39,7 @@ nav {
     position: absolute;
     bottom: -5px;
     left: 30px;
-    width: calc(100% - 1160px);
+    width: 60%;
     height: 2px;
     background-color: #ffffff;
 }
@@ -93,13 +79,13 @@ nav ul li a:hover:before {
 
 /* Main Content Styles */
 main {
-    position: relative; /* Add this line to establish a positioning context for sale-info */
+    position: relative;
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
+    justify-content: flex-start;
     align-items: center;
     flex: 1;
     padding-top: 0px;
-    padding-bottom: 100px; /* Add padding at the bottom to prevent content to overlap */
+    padding-bottom: 100px;
 }
 
 .image-container {
@@ -119,13 +105,12 @@ main {
 }
 
 .sale-info {
-    position: absolute; /* Change fixed to absolute */
+    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
     color: #ffffff;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px;
     width: 38%;
 }
 
@@ -134,7 +119,18 @@ main {
     text-align: left;
     padding: 30px;
     position: relative;
-    margin-left: -800px; /* Ensure container starts from the left */
+    margin-left: -800px;
+}
+
+@media (max-width: 768px) {
+    .sale-info {
+        position: static;
+        width: 100%;
+        padding: 20px;
+    }
+    .container {
+        margin-left: 0;
+    }
 }
 
 .content {
@@ -207,9 +203,6 @@ main {
 }
 
 /* Footer Styles */
-/* Footer Styles */
-
-
 footer {
     background-color: #f1ede2;
     display: flex;
@@ -219,7 +212,7 @@ footer {
 
 .footer-logo {
     flex: 1;
-    margin-bottom: 20px; /* margin tussen de columns en het logo wanneer het scherm kleiner wordt */
+    margin-bottom: 20px;
     margin-top: 20px;
 }
 
@@ -230,7 +223,7 @@ footer {
 .footer-columns {
     flex: 3;
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -242,7 +235,7 @@ footer {
 
 .footer-column ul {
     list-style-type: none;
-    padding-left: 0; 
+    padding-left: 0;
     margin-left: 0;
 }
 
@@ -265,7 +258,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .newsletter-form input[type="email"] {
@@ -288,11 +280,9 @@ footer {
     background-color: #42476d;
 }
 
-
-/* Media queries for Responsive Design */
 @media (min-width: 768px) {
     footer {
-        flex-direction: row; /* Revert to row for larger screens */
+        flex-direction: row;
         justify-content: space-between;
     }
 
@@ -306,16 +296,16 @@ footer {
     }
 
     .newsletter-form {
-        flex-direction: row; /* Revert to row for larger screens */
+        flex-direction: row;
         align-items: center;
     }
 
     .newsletter-form input[type="email"],
     .newsletter-form button {
-        width: auto; /* Revert to auto width for larger screens */
-        margin-bottom: 0; /* Remove bottom margin */
+        width: auto;
+        margin-bottom: 0;
         margin-top: 10px;
-        margin-left: 10px; /* Space between input and button */
+        margin-left: 10px;
     }
 }
 
@@ -324,17 +314,13 @@ footer {
     grid-template-columns: auto auto auto auto;
     background-color: aqua;
     margin-top: 10%;
-    
 }
 
 .product-item {
     margin-left: 20px;
     margin-right: 20px;
-    
-
 }
 
 .product-item h4 {
     font-size: 24px;
-
 }
